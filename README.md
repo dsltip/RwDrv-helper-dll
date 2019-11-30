@@ -1,7 +1,7 @@
 # RwDrv-helper-dll
 Helper library for RwDrv.sys to access PCI bus registers
 
-it exports:
+it exports:<BR>
 DLL_DECLARE BOOL LoadPhyMemDriver();
 DLL_DECLARE VOID UnloadPhyMemDriver();
 //access PCI bus
