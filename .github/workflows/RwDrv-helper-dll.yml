@@ -30,7 +30,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: artifact
-          path: |-
+          path: |
             Release\*.*
             test\rwdrv.sys
 
@@ -44,4 +44,5 @@ jobs:
       - name: Runt it
         shell: cmd
         run: |-
+          dir /s
           .\artifact\test.exe
