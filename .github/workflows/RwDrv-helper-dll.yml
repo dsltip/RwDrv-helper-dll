@@ -30,7 +30,9 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: artifact
-          path: Release\*.*
+          path: |-
+            Release\*.*
+            test\rwdrv.sys
 
   job_2:
     needs: job_1
