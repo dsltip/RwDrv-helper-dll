@@ -26,13 +26,12 @@ jobs:
         shell: cmd
         run: |-
           msbuild test\test.sln -t:Rebuild -p:Configuration=Release;Platform=win32;PlatformToolset=v142
+          copy /y test\rwdrv.sys Release\rwdrv.sys
 
       - uses: actions/upload-artifact@v2
         with:
           name: artifact
-          path: |
-            Release\*.*
-            test\rwdrv.sys
+          path: Release\*.*
 
   job_2:
     needs: job_1
